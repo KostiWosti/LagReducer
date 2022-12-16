@@ -1,0 +1,145 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local lagreducer = Instance.new("ScreenGui")
+local mainframe = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local mainframe2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local blackscreen = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local lowgfx = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+lagreducer.Name = "lagreducer"
+lagreducer.Parent = game:GetService("CoreGui")
+lagreducer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+mainframe.Name = "mainframe"
+mainframe.Parent = lagreducer
+mainframe.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+mainframe.Position = UDim2.new(0.110475138, 0, 0.280548662, 0)
+mainframe.Size = UDim2.new(0, 101, 0, 111)
+
+UICorner.Parent = mainframe
+
+mainframe2.Name = "mainframe2"
+mainframe2.Parent = mainframe
+mainframe2.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
+mainframe2.Position = UDim2.new(0.0792527944, 0, 0.103397183, 0)
+mainframe2.Size = UDim2.new(0, 84, 0, 90)
+
+UICorner_2.Parent = mainframe2
+
+blackscreen.Name = "blackscreen"
+blackscreen.Parent = mainframe
+blackscreen.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+blackscreen.Position = UDim2.new(0.230837375, 0, 0.24998486, 0)
+blackscreen.Size = UDim2.new(0, 54, 0, 22)
+blackscreen.Font = Enum.Font.FredokaOne
+blackscreen.Text = "BlackScreen"
+blackscreen.TextColor3 = Color3.fromRGB(0, 0, 0)
+blackscreen.TextSize = 10.000
+
+UICorner_3.Parent = blackscreen
+
+lowgfx.Name = "low gfx"
+lowgfx.Parent = mainframe
+lowgfx.BackgroundColor3 = Color3.fromRGB(86, 86, 86)
+lowgfx.Position = UDim2.new(0.230837375, 0, 0.5543136, 0)
+lowgfx.Size = UDim2.new(0, 54, 0, 22)
+lowgfx.Font = Enum.Font.FredokaOne
+lowgfx.Text = "Low GFX"
+lowgfx.TextColor3 = Color3.fromRGB(0, 0, 0)
+lowgfx.TextSize = 10.000
+
+UICorner_4.Parent = lowgfx
+
+-- Scripts:
+
+local function BYJRLE_fake_script() -- blackscreen.LocalScript 
+	local script = Instance.new('LocalScript', blackscreen)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		-- Gui to Lua
+		-- Version: 3.2
+	
+		-- Instances:
+	
+		local blackscreen = Instance.new("ScreenGui")
+		local blackscreen_2 = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+	
+		--Properties:
+	
+		blackscreen.Name = "blackscreen"
+		blackscreen.Parent = game:GetService("CoreGui")
+		blackscreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+		blackscreen_2.Name = "blackscreen"
+		blackscreen_2.Parent = blackscreen
+		blackscreen_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		blackscreen_2.Size = UDim2.new(0, 1174, 0, 802)
+	
+		TextLabel.Parent = blackscreen_2
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.BackgroundTransparency = 1.000
+		TextLabel.Position = UDim2.new(0.42759797, 0, 0.418952614, 0)
+		TextLabel.Size = UDim2.new(0, 200, 0, 50)
+		TextLabel.Font = Enum.Font.FredokaOne
+		TextLabel.Text = "Lag Reducer"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextSize = 100.000
+	end)
+end
+coroutine.wrap(BYJRLE_fake_script)()
+local function QAUULWF_fake_script() -- lowgfx.LocalScript 
+	local script = Instance.new('LocalScript', lowgfx)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.MouseButton1Click:Connect(function()
+			local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+			local g = game
+			local w = g.Workspace
+			local l = g.Lighting
+			local t = w.Terrain
+			t.WaterWaveSize = 0
+			t.WaterWaveSpeed = 0
+			t.WaterReflectance = 0
+			t.WaterTransparency = 0
+			l.GlobalShadows = false
+			l.FogEnd = 9e9
+			l.Brightness = 0
+			settings().Rendering.QualityLevel = "Level01"
+			for i, v in pairs(g:GetDescendants()) do
+				if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+					v.Material = "Plastic"
+					v.Reflectance = 0
+				elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+					v.Transparency = 1
+				elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+					v.Lifetime = NumberRange.new(0)
+				elseif v:IsA("Explosion") then
+					v.BlastPressure = 1
+					v.BlastRadius = 1
+				elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+					v.Enabled = false
+				elseif v:IsA("MeshPart") then
+					v.Material = "Plastic"
+					v.Reflectance = 0
+					v.TextureID = 10385902758728957
+				end
+			end
+			for i, e in pairs(l:GetChildren()) do
+				if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+					e.Enabled = false
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(QAUULWF_fake_script)()
