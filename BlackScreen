@@ -61,39 +61,35 @@ UICorner_4.Parent = lowgfx
 
 -- Scripts:
 
-local function BYJRLE_fake_script() -- blackscreen.LocalScript 
-	local script = Instance.new('LocalScript', blackscreen)
+-- Gui to Lua
+-- Version: 3.2
 
-	script.Parent.MouseButton1Click:Connect(function()
-		-- Gui to Lua
-		-- Version: 3.2
-	
-		-- Instances:
-	
-		local blackscreen = Instance.new("ScreenGui")
-		local blackscreen_2 = Instance.new("Frame")
-		local TextLabel = Instance.new("TextLabel")
-	
-		--Properties:
-	
-		blackscreen.Name = "blackscreen"
-		blackscreen.Parent = game:GetService("CoreGui")
-		blackscreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	
-		blackscreen_2.Name = "blackscreen"
-		blackscreen_2.Parent = blackscreen
-		blackscreen_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		blackscreen_2.Size = UDim2.new(0, 2000, 0, 2000)
-	
-		TextLabel.Parent = blackscreen_2
-		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel.BackgroundTransparency = 1.000
-		TextLabel.Position = UDim2.new(0.42759797, 0, 0.418952614, 0)
-		TextLabel.Size = UDim2.new(0, 200, 0, 50)
-		TextLabel.Font = Enum.Font.FredokaOne
-		TextLabel.Text = "Lag Reducer"
-		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-		TextLabel.TextSize = 100.000
+-- Instances:
+
+local blackscreen = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+blackscreen.Name = "blackscreen"
+blackscreen.Parent = game:GetService("CoreGui")
+blackscreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = blackscreen
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(-0.000173270702, 0, -0.0322494581, 0)
+Frame.Size = UDim2.new(0, 2000, 0, 2000)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.237000003, 0, 0.201000005, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "LAG REDUCER"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 100.000
 	end)
 end
 coroutine.wrap(BYJRLE_fake_script)()
