@@ -83,7 +83,7 @@ local function BYJRLE_fake_script() -- blackscreen.LocalScript
 		blackscreen_2.Name = "blackscreen"
 		blackscreen_2.Parent = blackscreen
 		blackscreen_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-		blackscreen_2.Size = UDim2.new(0, 1174, 0, 802)
+		blackscreen_2.Size = UDim2.new(0, 2000, 0, 2000)
 	
 		TextLabel.Parent = blackscreen_2
 		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
